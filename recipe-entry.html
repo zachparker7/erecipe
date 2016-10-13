@@ -1,0 +1,265 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="reset.css" type="text/css" media="screen" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,500" rel="stylesheet">
+<meta name="viewport" content="initial-scale=1.0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+  <header>
+    <img src="img/erecipe-logo-white.png" class="logo" alt="recipes" />
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+    <li><a href="recipes.html">recipes</a></li>
+        <li><a href="cookbooks.html">cookbooks</a></li>
+        <li><a href="about-erecipe.html">about</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li class="button login">login</li>
+      </ul>
+    </nav>
+    <div class="login-dropdown">
+      <img src="img/exit.png" class="exit"/>
+      <input type="text" name="username" id="login" placeholder="username or email">
+      <input type="text" name="password" id="login" placeholder="password">
+      <button type="submit" name="login" class="button" id="login-button">Login</button>
+      <p><a href="signup.html">Signup for Free!!!</a></p>
+    </div>
+  </header>
+
+  <div class="search-recipes-backdrop">
+  </div>
+
+  <div class="recipe-entry-wrap">
+    <div class="section-head">
+      <h2 class="center">create a recipe</h2>
+    </div>
+
+    <div class="recipe-entry-top">
+      <div class="column1">
+        <div class="upload-image"><a href="">
+          <img src="img/upload-image.svg"/>
+          <p>Upload Image</p>
+        </a></div>
+      </div>
+
+      <div class="column2">
+        <div class="ingredient-heading entry">
+          <div class="section-head">
+            <h2>recipe information</h2>
+          </div>
+          <div class="input-section">
+            <div class="input-area">
+              <label for="recipes[title]">recipe title:</label>
+              <input type="text" name="recipes[title]" id="recipes_title" >
+            </div>
+            <div class="input-area">
+              <div>
+                <label for="prep" class="prep">recipe description:</label>
+                <input type="textarea" name="prep" id="recipes_description" >
+              </div>
+              <div><p>Describe the recipe, where it came from, why you like it, tips on preparation, special notes, etc.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-entry-bottom">
+      <div class="ingredient-heading entry">
+        <div class="section-head">
+          <h2>recipe directions</h2>
+        </div>
+        <div><p>Write each ingredient and direction as its own line item.  Simply press enter to create a new line item for an ingredient or a step in the directions.  Don't worry about a line item taking up two lines, you can only create a new line item by pressing enter.</p></div>
+        <div class="input-section col1">
+          <div class="input-area">
+            <label for="recipes[title]">recipe ingredients:</label>
+            <textarea name="recipes[title]" id="recipes_title" ></textarea>
+          </div>
+        </div>
+        <div class="input-section col2">
+          <div class="input-area">
+            <div>
+              <label for="prep" class="prep">recipe directions:</label>
+              <textarea name="prep" id="recipes_description" ></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-entry-bottom">
+      <div class="ingredient-heading entry">
+        <div class="section-head">
+          <h2>recipe cooking info</h2>
+        </div>
+        <div class="input-section col5">
+          <div class="input-area">
+              <label>Servings</label>
+              <input name="serving" type="text" />
+              <label>Custom Yield</label>
+              <input name="serving" type="text" placeholder="8"/><input name="serving" type="text" placeholder="muffins"/>
+          </div>
+        </div>
+        <div class="input-section col6">
+          <div class="input-area">
+            <label>Chef's Notes</label>
+            <textarea name="prep" id="recipes_description" ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-entry-bottom">
+      <div class="ingredient-heading entry">
+        <div class="section-head">
+          <h2>recipe tags</h2>
+        </div>
+        <div><p>Help people find your recipe more easily!  Simply select up to 3 options for each category to be searchable for those categories in our advanced search feature.</p></div>
+        <div class="input-section col3">
+          <div class="input-area third">
+            <label for="recipes[title]">diets:</label>
+            <div class="option-checklist wide">
+              <div class="checklist diet ">
+                <div class="option-selection"><input type="checkbox" name="vegan" /><label for="vegan">Vegan</label></div>
+                <div class="option-selection"><input type="checkbox" name="vegetarian" /><label>Vegetarian</label></div>
+                <div class="option-selection"><input type="checkbox" name="gluten-free" /><label>Gluten Free</label></div>
+                <div class="option-selection"><input type="checkbox" name="low-carb" /><label>Low Carb</label></div>
+                <div class="option-selection"><input type="checkbox" name="paleo" /><label>Paleo Diet</label></div>
+                <div class="option-selection"><input type="checkbox" name="low-fat" /><label>Low Fat</label></div>
+              </div>
+              <div class="checklist courses">
+                <div class="option-selection"><input type="checkbox" name="south-beach" /><label>South Beach Diet</label></div>
+                <div class="option-selection"><input type="checkbox" name="mediterrean" /><label>Mediterrean Diet</label></div>
+                <div class="option-selection"><input type="checkbox" name="zone" /><label>The Zone Diet</label></div>
+                <div class="option-selection"><input type="checkbox" name="raw-food" /><label>Raw Food Diet</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="input-area narrow">
+            <label for="recipes[title]">allergies:</label>
+            <div class="option-checklist ">
+              <div class="checklist allergies">
+                <div class="option-selection"><input type="checkbox" name="nuts" /><label for="vegan">Nut Free</label></div>
+                <div class="option-selection"><input type="checkbox" name="lactose" /><label>Lactose Free</label></div>
+                <div class="option-selection"><input type="checkbox" name="gluten" /><label>Gluten Free</label></div>
+                <div class="option-selection"><input type="checkbox" name="shellfish" /><label>Shellfish</label></div>
+                <div class="option-selection"><input type="checkbox" name="eggs" /><label>Eggs</label></div>
+                <div class="option-selection"><input type="checkbox" name="fish" /><label>Fish</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="input-area narrow">
+            <label for="recipes[title]">courses:</label>
+            <div class="option-checklist">
+              <div class="checklist courses">
+                <div class="option-selection"><input type="checkbox" name="breakfast" /><label for="vegan">Breakfast</label></div>
+                <div class="option-selection"><input type="checkbox" name="brunch" /><label>Brunch</label></div>
+                <div class="option-selection"><input type="checkbox" name="lunch" /><label>Lunch</label></div>
+                <div class="option-selection"><input type="checkbox" name="snacks" /><label>Snacks</label></div>
+                <div class="option-selection"><input type="checkbox" name="dinner" /><label>Dinner</label></div>
+                <div class="option-selection"><input type="checkbox" name="desserts" /><label>Desserts</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="input-area narrow no-border">
+            <label for="recipes[title]">events:</label>
+            <div class="option-checklist">
+              <div class="checklist events">
+                <div class="option-selection"><input type="checkbox" name="game-day" /><label for="vegan">Game Day</label></div>
+                <div class="option-selection"><input type="checkbox" name="bbq" /><label>Barbeque<label></div>
+                <div class="option-selection"><input type="checkbox" name="social" /><label>Social Gathering</label></div>
+                <div class="option-selection"><input type="checkbox" name="date" /><label>Date Night</label></div>
+                <div class="option-selection"><input type="checkbox" name="family" /><label>Big Family Dinner</label></div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="input-section col3">
+          <div class="input-area third">
+            <label for="recipes[title]">holidays:</label>
+            <div class="option-checklist wide">
+              <div class="checklist holidays">
+                <div class="option-selection"><input type="checkbox" name="thanksgiving" /><label for="vegan">Thanksgiving</label></div>
+                <div class="option-selection"><input type="checkbox" name="christmas" /><label>Christmas</label></div>
+                <div class="option-selection"><input type="checkbox" name="st-patties" /><label>St. Patricks Day</label></div>
+                <div class="option-selection"><input type="checkbox" name="easter" /><label>Easter</label></div>
+                <div class="option-selection"><input type="checkbox" name="ramadan" /><label>Ramadan</label></div>
+              </div>
+              <div class="checklist  courses">
+                <div class="option-selection"><input type="checkbox" name="july4" /><label>4th of July</label></div>
+                <div class="option-selection"><input type="checkbox" name="cinco" /><label>Cinco de Mayo</label></div>
+                <div class="option-selection"><input type="checkbox" name="hannuka" /><label>Hannukah</label></div>
+                <div class="option-selection"><input type="checkbox" name="passover" /><label>Passover</label></div>
+                <div class="option-selection"><input type="checkbox" name="rosh" /><label>Rosh Hashanah</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="input-area extrawide">
+            <label for="recipes[title]">cuisines:</label>
+            <div class="option-checklist wide extra">
+              <div class="checklist cuisine">
+                <div class="option-selection"><input type="checkbox" name="french" /><label for="vegan">French</label></div>
+                <div class="option-selection"><input type="checkbox" name="italian" /><label>Italian</label></div>
+                <div class="option-selection"><input type="checkbox" name="asian" /><label>Japanese</label></div>
+                <div class="option-selection"><input type="checkbox" name="indian" /><label>Indian</label></div>
+                <div class="option-selection"><input type="checkbox" name="greek" /><label>Greek</label></div>
+              </div>
+              <div class="checklist  courses">
+                <div class="option-selection"><input type="checkbox" name="july4" /><label>Chinese</label></div>
+                <div class="option-selection"><input type="checkbox" name="cinco" /><label>Thai</label></div>
+                <div class="option-selection"><input type="checkbox" name="hannuka" /><label>Russian</label></div>
+                <div class="option-selection"><input type="checkbox" name="passover" /><label>Mexican</label></div>
+                <div class="option-selection"><input type="checkbox" name="rosh" /><label>Brazilian</label></div>
+              </div>
+              <div class="checklist  courses">
+                <div class="option-selection"><input type="checkbox" name="peruvian" /><label>Peruvian</label></div>
+                <div class="option-selection"><input type="checkbox" name="colombian" /><label>Colombian</label></div>
+                <div class="option-selection"><input type="checkbox" name="oceana" /><label>Oceana</label></div>
+                <div class="option-selection"><input type="checkbox" name="korean" /><label>Korean</label></div>
+                <div class="option-selection"><input type="checkbox" name="african" /><label>African</label></div>
+              </div>
+            </div>
+          </div>
+          <div class="input-area extranarrow">
+            <label for="recipes[title]">seasons:</label>
+            <div class="option-checklist">
+              <div class="checklist events">
+                <div class="option-selection"><input type="checkbox" name="winter" /><label for="winter">Winter</label></div>
+                <div class="option-selection"><input type="checkbox" name="spring" /><label>Spring<label></div>
+                <div class="option-selection"><input type="checkbox" name="summer" /><label>Summer</label></div>
+                <div class="option-selection"><input type="checkbox" name="fall" /><label>Fall</label></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div class="footer-left">
+      <img src="img/erecipe-logo-white.png" alt="recipes"/>
+      <p><a href="about-erecipe.html">about</a> - <a href="recipes.html">recipes</a> - <a href="blog.html">blog</a></p>
+    </div>
+    <div class="footer-right">
+      <p>follow us!</p>
+      <div class="social-buttons">
+      <img src="img/pinterest.png" />
+      <img src="img/google-plus.png" />
+      <img src="img/twitter.png" />
+      <img src="img/facebook.png" />
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="scriptsheet.js"></script>
+
+
+
+</body>

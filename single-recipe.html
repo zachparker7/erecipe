@@ -1,0 +1,325 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="reset.css" type="text/css" media="screen" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,500" rel="stylesheet">
+<meta name="viewport" content="initial-scale=1.0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+  <header>
+    <img src="img/erecipe-logo-white.png" class="logo" alt="recipes" />
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="recipes.html">recipes</a></li>
+        <li><a href="cookbooks.html">cookbooks</a></li>
+        <li><a href="about-erecipe.html">about</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li class="button login">login</li>
+      </ul>
+    </nav>
+    <div class="login-dropdown">
+      <img src="img/exit.png" class="exit" />
+      <input type="text" name="username" id="login" placeholder="username or email">
+      <input type="text" name="password" id="login" placeholder="password">
+      <button type="submit" name="login" class="button" id="login-button">Login</button>
+      <p>Signup for Free!!!</p>
+    </div>
+  </header>
+
+  <div class="search-recipes-backdrop">
+  </div>
+  <div class="search-recipes">
+    <div class="search">
+      <input type="text" name="search" id="recipe-search" placeholder="what are you craving?...">
+      <button type="submit" name="search" class="button" id="search-button"><img src="img/search.png"></button>
+    </div>
+    <div class="filter hover">filter <span class="filter-off visible">&#9650</span><span class="filter-on">&#9660</span></div>
+    <div class="filter-options hidden">
+      <div class="filter-option-top">
+        <div class="option-box">
+          <div class="option-select diets hover">diets <span class="filter-off">&#9650</span><span class="filter-on">&#9660</span></div>
+          <div class="option-select allergies hover">allergies <span class="filter-off">&#9650</span><span class="filter-on">&#9660</span></div>
+          <div class="option-select courses hover">courses <span class="filter-off">&#9650</span><span class="filter-on">&#9660</span></div>
+          <div class="option-select holidays hover">holidays <span class="filter-off">&#9650</span><span class="filter-on">&#9660</span></div>
+          <div class="option-select cuisines hover">cuisines <span class="filter-off">&#9650</span><span class="filter-on">&#9660</span></div>
+        </div>
+        <div class="option-checklist">
+          <div class="checklist diet hidden">
+            <div class="option-selection"><input type="checkbox" name="vegan" /><label for="vegan">Vegan</label></div>
+            <div class="option-selection"><input type="checkbox" name="vegetarian" /><label>Vegetarian</label></div>
+            <div class="option-selection"><input type="checkbox" name="gluten-free" /><label>Gluten Free</label></div>
+            <div class="option-selection"><input type="checkbox" name="low-carb" /><label>Low Carb</label></div>
+            <div class="option-selection"><input type="checkbox" name="low-fat" /><label>Low Fat</label></div>
+          </div>
+        </div>
+        <div class="option-checklist hidden">
+          <div class="checklist allergies">
+            <div class="option-selection"><input type="checkbox" name="nuts" /><label for="vegan">Nut Free</label></div>
+            <div class="option-selection"><input type="checkbox" name="lactose" /><label>Lactose Free</label></div>
+            <div class="option-selection"><input type="checkbox" name="gluten" /><label>Gluten Free</label></div>
+            <div class="option-selection"><input type="checkbox" name="shellfish" /><label>Shellfish</label></div>
+          </div>
+        </div>
+        <div class="option-checklist wide">
+          <div class="checklist courses">
+            <div class="option-selection"><input type="checkbox" name="breakfast" /><label for="vegan">Breakfast</label></div>
+            <div class="option-selection"><input type="checkbox" name="brunch" /><label>Brunch</label></div>
+            <div class="option-selection"><input type="checkbox" name="lunch" /><label>Lunch</label></div>
+            <div class="option-selection"><input type="checkbox" name="snacks" /><label>Snacks</label></div>
+            <div class="option-selection"><input type="checkbox" name="dinner" /><label>Dinner</label></div>
+          </div>
+          <div class="checklist courses">
+            <div class="option-selection"><input type="checkbox" name="desserts" /><label>Desserts</label></div>
+          </div>
+        </div>
+        <div class="option-checklist hidden">
+          <div class="checklist holidays">
+            <div class="option-selection"><input type="checkbox" name="thanksgiving" /><label for="vegan">Thanksgiving</label></div>
+            <div class="option-selection"><input type="checkbox" name="christmas" /><label>Christmas</label></div>
+            <div class="option-selection"><input type="checkbox" name="st-patties" /><label>St. Patricks Day</label></div>
+            <div class="option-selection"><input type="checkbox" name="easter" /><label>Easter</label></div>
+            <div class="option-selection"><input type="checkbox" name="ramadan" /><label>Ramadan</label></div>
+          </div>
+        </div>
+        <div class="option-checklist hidden">
+          <div class="checklist cuisine">
+            <div class="option-selection"><input type="checkbox" name="french" /><label for="vegan">French</label></div>
+            <div class="option-selection"><input type="checkbox" name="italian" /><label>Italian</label></div>
+            <div class="option-selection"><input type="checkbox" name="asian" /><label>Asian</label></div>
+            <div class="option-selection"><input type="checkbox" name="indian" /><label>Indian</label></div>
+            <div class="option-selection"><input type="checkbox" name="greek" /><label>Greek</label></div>
+          </div>
+        </div>
+
+        <div class="ingredient-filters">
+          <div class="ingredient-filter"><label>including ingredient</label><img src="img/plus.png" class="hover"><input type="text" name="including" /></div>
+          <div class="ingredient-filter"><label>excluding ingredient</label><img src="img/plus.png" class="hover"><input type="text" name="excluding" /></div>
+        </div>
+      </div>
+
+      <div class="filters-checklist">
+        <div class="filter-checklist-top">
+          <div class="filters-checklist-heading">selected filters</div>
+          <div class="ingredient-filters top">
+            <div class="ingredient-filter"><label>custom-filters</label><img src="img/plus.png" class="hover"><input type="text" name="custom" /></div>
+          </div>
+        </div>
+        <div class="selected-filter">gluten free <img src="img/cancel.png" width="15px" class="hover"/></div>
+        <div class="selected-filter">breakfast <img src="img/cancel.png" width="15px" class="hover"/></div>
+        <div class="selected-filter">italian <img src="img/cancel.png" width="15px"  class="hover"/></div>
+        <div class="selected-filter">vegetarian <img src="img/cancel.png" width="15px"  class="hover"/></div>
+        <div class="selected-filter">eggs <img src="img/cancel.png" width="15px" class="hover"/></div>
+        <div class="selected-filter">easter <img src="img/cancel.png" width="15px" class="hover"/></div>
+        <div class="selected-filter">oats <img src="img/cancel.png" width="15px" class="hover"/></div>
+        <div class="selected-filter">salmon <img src="img/cancel.png" width="15px" class="hover"/></div>
+        <div class="selected-filter">nut free <img src="img/cancel.png" width="15px" class="hover"/></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="single-recipe-wrapper">
+    <div class="recipe-info-top-section">
+      <div class="two-column">
+        <div class="column-one">
+          <img src="img/meatballs.jpg" />
+        </div>
+        <div class="column-two">
+          <h1>Italian Meatballs</h1>
+          <div class="recipe-rating-section">
+            <img src="img/tag.png" class="star-rating"/>
+            <div class="right-section">
+              <img src="img/rating.png" />
+              <img src="img/like-recipe.png" />
+            </div>
+          </div>
+          <h4>by: <span id="recipe-author">vinny bagadonuts</span></h4>
+          <div class="recipe-description">
+            <p>Every good cook needs to have a good meatball recipe in their repertoire. In Italian families, their meatball recipe is usually passed down from generation to generation, and it's usually a close guarded secret.  This recipe is my families recipe, and it's not so secret, but it will produce melt in your mouth recipe worthy of any pasta dish.  Enjoy!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ingredient-heading">
+      <div class="section-head">
+        <h2>ingredients</h2>
+      </div>
+      <div class="yield-controls">
+        <div class="serving">
+          <label for="serving">servings:</label>
+          <input type="text" name="serving" id="serving-control" >
+          <label for="prep" class="prep">prep-time:</label>
+          <input type="text" name="prep" id="serving-control" >
+          <button type="submit" name="search" class="button" >update</button>
+        </div>
+      </div>
+    </div>
+    <div class="recipe-ingredients">
+      <div class="two-column">
+        <div class="column-one">
+          <div class="ingredient-list">
+            <p><span class="ing-amt" id="ing-amt-1">1 lb. </span><span id="ing-1">ground pork/veal/beef mix</span></p>
+            <p><span class="ing-amt" id="ing-amt-2">2 </span><span id="ing-2">eggs</span></p>
+            <p><span class="ing-amt" id="ing-amt-3">3/4 cup </span><span id="ing-3">italian breadcrumbs</span></p>
+            <p><span class="ing-amt" id="ing-amt-4">1/4 cup </span><span id="ing-4">whole milk</span></p>
+            <p><span class="ing-amt" id="ing-amt-5">1/4 cup </span><span id="ing-5">parmesan cheese</span></p>
+            <p><span class="ing-amt" id="ing-amt-6">3 tbsp. </span><span id="ing-6">garlic powder</span></p>
+            <p><span class="ing-amt" id="ing-amt-7">2 tsp. </span><span id="ing-7">salt</span></p>
+            <p><span class="ing-amt" id="ing-amt-8">1 tsp. </span><span id="ing-8">ground black pepper</span></p>
+            <p><span class="ing-amt" id="ing-amt-9">1/4 cup </span><span id="ing-7">parsley chopped</span></p>
+            <p><span class="ing-amt" id="ing-amt-10">1 tsp. </span><span id="ing-7">oregano</span></p>
+          </div>
+        </div>
+        <div class="column-two">
+          <img src="img/nutrition-facts.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head">
+      <h2>preparation</h2>
+    </div>
+
+    <div class="recipe-instructions">
+      <div class="column-one">
+        <p>1.  In a large bowl, combine the meat, bread crumbs, parmesan cheese, milk, garlic powder, salt, pepper, parsley, and oregano, and work thoroughly until all ingredients are mixed.</p>
+        <p>2.  Roll meat mixture into balls according to the size you'd like.</p>
+        <p>3.  In a frying pan, heat up the olive oil until hot, and heat meatballs until they are cooked throughout, turning every few minutes.</p>
+      </div>
+      <div class="column-two">
+        <img src="img/meatballs.jpg" />
+      </div>
+    </div>
+
+    <div class="adspace" id="ad-ten">
+      <h2>ad space</h2>
+    </div>
+
+    <div class="section-head">
+      <h2>related recipes</h2>
+    </div>
+
+    <div class="four-column">
+
+      <div class="quarter-column">
+        <div class="recipe-card">
+          <div class="featured-recipe">
+            <img src="img/barley.jpg" alt="pumpkin pancakes" class="featured-recipe-img" />
+            <div class="recipe-info">
+              <div class="recipe-info-top">
+                <h2>IPA Beer</h2>
+                <img src="img/rating.png" class="recipe-rating"/>
+              </div>
+              <div class="recipe-info-bottom">
+                <img src="img/tag.jpg" class="recipe-tag"/>
+                <img src="img/comment-tag.jpg" class="recipe-comment"/>
+                <img src="img/like-recipe.jpg" class="recipe-comment"/>
+              </div>
+            </div>
+            <div class="chef-section">
+              <p>by: bruhaus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quarter-column">
+        <div class="recipe-card">
+          <div class="featured-recipe">
+            <img src="img/chicken-dish.jpg" alt="pumpkin pancakes" class="featured-recipe-img" />
+            <div class="recipe-info">
+              <div class="recipe-info-top">
+                <h2>fireball chicken</h2>
+                <img src="img/rating.png" class="recipe-rating"/>
+              </div>
+              <div class="recipe-info-bottom">
+                <img src="img/tag.jpg" class="recipe-tag"/>
+                <img src="img/comment-tag.jpg" class="recipe-comment"/>
+                <img src="img/like-recipe.jpg" class="recipe-comment"/>
+              </div>
+            </div>
+            <div class="chef-section">
+              <p>by: wendy snacks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quarter-column">
+        <div class="recipe-card">
+          <div class="featured-recipe">
+            <img src="img/gourds.jpg" alt="pumpkin pancakes" class="featured-recipe-img" />
+            <div class="recipe-info">
+              <div class="recipe-info-top">
+                <h2>squash and kale soup</h2>
+                <img src="img/rating.png" class="recipe-rating"/>
+              </div>
+              <div class="recipe-info-bottom">
+                <img src="img/tag.jpg" class="recipe-tag"/>
+                <img src="img/comment-tag.jpg" class="recipe-comment"/>
+                <img src="img/like-recipe.jpg" class="recipe-comment"/>
+              </div>
+            </div>
+            <div class="chef-section">
+              <p>by: country pumpkin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quarter-column">
+        <div class="recipe-card">
+          <div class="featured-recipe">
+            <img src="img/salad.jpg" alt="pumpkin pancakes" class="featured-recipe-img" />
+            <div class="recipe-info">
+              <div class="recipe-info-top">
+                <h2>apple chip salad</h2>
+                <img src="img/rating.png" class="recipe-rating"/>
+              </div>
+              <div class="recipe-info-bottom">
+                <img src="img/tag.jpg" class="recipe-tag"/>
+                <img src="img/comment-tag.jpg" class="recipe-comment"/>
+                <img src="img/like-recipe.jpg" class="recipe-comment"/>
+              </div>
+            </div>
+            <div class="chef-section">
+              <p>by: living healthy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="footer-left">
+      <img src="img/erecipe-logo-white.png" alt="recipes"/>
+      <p><a href="about-erecipe.html">about</a> - <a href="recipes.html">recipes</a> - <a href="blog.html">blog</a></p>
+    </div>
+    <div class="footer-right">
+      <p>follow us!</p>
+      <div class="social-buttons">
+      <img src="img/pinterest.png" />
+      <img src="img/google-plus.png" />
+      <img src="img/twitter.png" />
+      <img src="img/facebook.png" />
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="scriptsheet.js"></script>
+
+
+
+</body>
